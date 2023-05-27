@@ -1,0 +1,9 @@
+[Unit]
+Description=monitor Apps Network Traffic
+
+[Service]
+Type=simple
+ExecStart=/opt/netMonitor/netMonitor.py
+
+[Install]
+WantedBy=multi-user.target

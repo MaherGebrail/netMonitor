@@ -1,0 +1,32 @@
+{
+    "_overall comment_": "you may need to change the 'data' section in objs => to customize how the service works.",
+    "testing": {
+        "_comment_of_usage_": 
+            "This bool value if (true) : will show the lines captured that got no names nor right ips, which is not important really.",
+        "data": false
+    },
+    "name_limit":{
+        "_comment_of_usage_": "The (int) limit of char length of cmd name that appears in the report ... you may want to write (0) or False to not limit, but (100) is the default value",
+        "data" : 100
+    },
+    "main_program_name_only":{
+        "_comment_of_usage_": "The usage is to show only the main program, which is not recommended as it may only show (python or java) only which actually show nothing important without the app name, the default is false",
+        "data" : false
+    },
+    "excluded": {
+        "_comment_of_usage_": [
+        "List of apps that you don't want to show their data traffic in the report, ex. [app1, app2].",
+        "IMPORTANT: Make sure that the name of the app you excluded is the same as it appears in the report.",
+        "This can be easier by making [main_program_name_only] True."
+        ],
+        "data" : []
+    },
+    "one_file" : {
+        "_comment_of_usage_": "if true, the report will only have (one name) [the running report] .. it will not keep old log files if the service restarted or the pc rebooted",
+        "data": true
+    },
+    "sleep":{
+        "_comment_of_usage_": "The time to sleep before refreshing the report",
+        "data": 0.5  
+    }
+}
